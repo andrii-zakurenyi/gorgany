@@ -22,6 +22,7 @@ builds:
 archives:
   - format: binary
 release:
+  name_template: "Gorgany CLI {{.Version}}"
   github:
     owner: andrii-zakurenyi
     name: gorgany
