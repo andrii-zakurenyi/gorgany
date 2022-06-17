@@ -19,3 +19,15 @@ builds:
       - linux_amd64
       - darwin_amd64
       - darwin_arm64
+release:
+  github:
+    owner: andrii-zakurenyi
+    name: gorgany
+brews:
+  - tap:
+      owner: andrii-zakurenyi
+      name: homebrew-gorgany
+    homepage: https://github.com/andrii-zakurenyi/gorgany
+    folder: Formula
+    description: Gorgany | Testing Things
+    license: "Apache-2.0"
