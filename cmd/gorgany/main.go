@@ -4,11 +4,8 @@ import (
 	"flag"
 	"fmt"
 	"runtime"
-)
 
-var (
-	gitTag    = "<unknown>"
-	gitCommit = "<unknown>"
+	"github.com/andrii-zakurenyi/gorgany/pkg/version"
 )
 
 func main() {
@@ -16,12 +13,12 @@ func main() {
 	flag.Parse()
 
 	if *versionFlag {
-		fmt.Printf("Gorgany %s\n", gitTag)
+		fmt.Printf("Gorgany %s\n", version.GitTag)
 		return
 	}
 
 	fmt.Println("Gorgany")
-	fmt.Printf("\t- gitTag:    %s\n", gitTag)
-	fmt.Printf("\t- gitCommit: %s\n", gitCommit)
+	fmt.Printf("\t- gitTag:    %s\n", version.GitTag)
+	fmt.Printf("\t- gitCommit: %s\n", version.GitCommit)
 	fmt.Printf("\t- platform:  %s/%s\n", runtime.GOOS, runtime.GOARCH)
 }

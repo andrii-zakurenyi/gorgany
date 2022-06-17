@@ -10,8 +10,8 @@ builds:
       - CGO_ENABLED=0
     ldflags:
       - -s -w
-      - -X github.com/andrii-zakurenyi/gorgany/cmd/gorgany.gitTag={{ .Summary }}
-      - -X github.com/andrii-zakurenyi/gorgany/cmd/gorgany.gitCommit={{ .FullCommit }}
+      - -X github.com/andrii-zakurenyi/gorgany/pkg/version.GitTag={{ .Summary }}
+      - -X github.com/andrii-zakurenyi/gorgany/pkg/version.GitCommit={{ .FullCommit }}
     targets:
       - windows_386
       - windows_amd64
