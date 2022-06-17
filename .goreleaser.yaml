@@ -1,0 +1,20 @@
+project_name: gorgany
+before:
+  hooks:
+    - go mod tidy
+builds:
+  - binary: '{{ .Summary }}/gorgany-{{ replace .Os "windows" "win" }}-{{ if eq .Arch "386" }}x86{{ else if eq .Arch "amd64" }}x64{{ else }}{{ .Arch }}{{end}}'
+    no_unique_dist_dir: true
+    env:
+      - CGO_ENABLED=0
+    ldflags:
+      - -s -w
+      - -X github.com/andrii-zakurenyi/gorgany/cmd/gorgany.gitTag={{ .Summary }}
+      - -X github.com/andrii-zakurenyi/gorgany/cmd/gorgany.gitCommit={{ .FullCommit }}
+    targets:
+      - windows_386
+      - windows_amd64
+      - linux_386
+      - linux_amd64
+      - darwin_amd64
+      - darwin_arm64
