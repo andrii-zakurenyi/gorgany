@@ -25,6 +25,15 @@ release:
   github:
     owner: andrii-zakurenyi
     name: gorgany
+nfpms:
+  - license: "Apache-2.0"
+    maintainer: Andrii.Zakurenyi@c.delinea.com
+    homepage: https://github.com/andrii-zakurenyi/gorgany
+    bindir: /usr/bin
+    description: Gorgany | Testing Things
+    formats:
+      - deb
+      - rpm
 brews:
   - tap:
       owner: andrii-zakurenyi
