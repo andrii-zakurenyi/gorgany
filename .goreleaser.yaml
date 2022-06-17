@@ -28,7 +28,6 @@ brews:
       owner: andrii-zakurenyi
       name: homebrew-gorgany
       branch: main
-      token: "{{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}"
     homepage: https://github.com/andrii-zakurenyi/gorgany
     folder: Formula
     description: Gorgany | Testing Things
