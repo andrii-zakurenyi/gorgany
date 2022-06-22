@@ -17,7 +17,7 @@ func main() {
 		return
 	}
 
-	fmt.Println("Gorgany")
+	fmt.Println("<- Gorgany ->")
 	fmt.Printf("\t- gitTag:    %s\n", version.GitTag)
 	fmt.Printf("\t- gitCommit: %s\n", version.GitCommit)
 	fmt.Printf("\t- platform:  %s/%s\n", runtime.GOOS, runtime.GOARCH)
